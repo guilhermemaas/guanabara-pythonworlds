@@ -44,7 +44,8 @@ soma(b = 45, a = 25)
 
 contador(2, 1, 7)
 contador(3, 4, 5, 9)
-
+tupla = (1, 2, 4, 5)
+contador(tupla)
 numeros = [1, 2, 4]
 print(numeros)
 dobraLista(numeros)
