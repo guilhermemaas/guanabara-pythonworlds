@@ -15,7 +15,7 @@ def monta_titulo(titulo):
     print(f'{" " * 5}' + f'{titulo}')
     imprime_linha(total_caracteres + 10)
 
-def numeros_sorteados():
+def sortear_numeros():
     numeros_sorteados = []
     contador = 0
     while contador != 5:
@@ -25,7 +25,7 @@ def numeros_sorteados():
         contador += 1
     return(numeros_sorteados)
 
-def soma_pares(numeros):
+def somar_pares(numeros):
     soma_par = 0
     for valor in numeros:
         if valor % 2 == 0:
@@ -36,10 +36,10 @@ def soma_pares(numeros):
 
 
 monta_titulo('SORTEIO DE NUMEROS')
-numeros_sorteados = numeros_sorteados()
+numeros_sorteados = sortear_numeros()
 sleep(1)
 monta_titulo('SOMA DE NUMEROS PARES')
-print(f'A soma de todos os pares foi: {soma_pares(numeros_sorteados)}')
+print(f'A soma de todos os pares foi: {somar_pares(numeros_sorteados)}')
 monta_titulo('FIM DO PROGRAMA')
 
 

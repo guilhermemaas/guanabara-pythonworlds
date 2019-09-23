@@ -9,16 +9,24 @@ c) uma contagem personalizada
 """
 from time import sleep
 
-def imprime_linha(quantidade):
+def imprimir_linha(quantidade):
     print(f'=' * quantidade)
 
-def monta_titulo(titulo):
+def montar_titulo(titulo):
     total_caracteres = len(titulo)
-    imprime_linha(total_caracteres + 10)
+    imprimir_linha(total_caracteres + 10)
     print(f'{" " * 5}' + f'{titulo}')
-    imprime_linha(total_caracteres + 10)
+    imprimir_linha(total_caracteres + 10)
 
 def contador(numero_inicial, numero_final, passo, tipo_contador):
+    """
+    1) de 1 até 10, de 1 em 1
+    2) de 10 até 0, de 2 em 2
+    3) uma contagem personalizada
+    """
+    if passo == 0:
+        print('PASSO 0 nao permitido, alterando para 1.')
+        passo = 1
     if tipo_contador == 1:
         for valor in range(1, 10 + 1, 1):
             print(f'Imprimindo Valor: {valor}.')
@@ -34,13 +42,13 @@ def contador(numero_inicial, numero_final, passo, tipo_contador):
             print(f'Imprimindo Valor: {valor}.')
 
 
-monta_titulo('FUNCAO CONTADOR')
+montar_titulo('FUNCAO CONTADOR')
 print('TRES OPCOES:\n1 - Exibir contador de 1 ate 10, de 1 em 1.\n2 - Exibir de 10 a 0, de 2 em 2.\n'
       '3 - Contagem customizada, nesse caso, informar VALOR INICIAL, VALOR FINAL e PASSO.')
 sleep(0.5)
 
 while True:
-    monta_titulo('INFORME A SUA ESCOLHA')
+    montar_titulo('INFORME A SUA ESCOLHA')
     tipo_contador = 0
     valores_validos = [1, 2, 3]
     while tipo_contador not in valores_validos:
@@ -62,4 +70,4 @@ while True:
     if continuar == 'N':
         break
 
-monta_titulo('FIM - PROGRAMA')
+montar_titulo('FIM - PROGRAMA')

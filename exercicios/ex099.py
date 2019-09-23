@@ -11,7 +11,7 @@ def maior(numeros):
             maior_numero = numero
     return maior_numero
 
-print('DIGITE NUMEROS PARA SABER QUAL O MAIOR: ')
+print('==DIGITE NUMEROS PARA SABER QUAL O MAIOR==')
 
 lista_numeros = []
 while True:
@@ -20,4 +20,5 @@ while True:
     if continuar == 'N':
         break
 
+print(f'FORAM INFORMADOS AO TODO: {len(lista_numeros)}.')
 print('=' * 20 + f'MAIOR NUMERO:\n {maior(lista_numeros)}.')
