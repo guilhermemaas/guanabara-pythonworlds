@@ -41,12 +41,10 @@ sleep(0.5)
 
 while True:
     monta_titulo('INFORME A SUA ESCOLHA')
-
     tipo_contador = 0
     valores_validos = [1, 2, 3]
     while tipo_contador not in valores_validos:
         tipo_contador = int(input('Valores validos para escolha: 1, 2 ou 3: \n'))
-
     if tipo_contador == 3:
         numero_inicial = int(input('Informe um valor de Inicio: \n'))
         numero_final = int(input('Informe um valor de Fim: \n'))
@@ -56,7 +54,6 @@ while True:
         contador(0, 0, 0, 1)
     else:
         contador(0, 0, 0, 2)
-
     continuar = ' '
     while continuar not in 'SN':
         continuar = str(input('DESEJA RODAR MAIS CONTADOR? S/N\n')).upper().strip()

@@ -16,7 +16,6 @@ def monta_titulo(titulo):
 
 
 while True:
-
     texto = str(input('Digite um título qualquer: ')).upper().strip()
     monta_titulo(texto)
 
