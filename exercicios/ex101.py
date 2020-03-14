@@ -11,11 +11,11 @@ def voto(nome, data_nascimento):
     idade = ano_atual - data_nascimento
     if idade >= 16 and idade < 18 or idade > 70:
         return f'OPCIONAL - Idade: {idade}'
-    elif idade >=18 and idade < 70:
+    elif idade >= 18 and idade < 70:
         return f'OBRIGATORIA - Idade: {idade}'
     elif idade < 16:
-        return f'NEGADA - Idade: {idade}' 
-        
+        return f'NEGADA - Idade: {idade}'
+
 print(f'Verificacao de idade para votar. Informe os dados.')
 nome = str(input('Favor informar o seu nome: \n')).upper().strip()
 data_nascimento = int(input('Favor informar o seu ano de nascimento: \n'))
