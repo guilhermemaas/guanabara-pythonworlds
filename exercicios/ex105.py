@@ -30,14 +30,23 @@ while True:
         contador_notas += 1
     aluno['nome'] = nome_aluno
     aluno['notas'] = notas
-    alunos_notas.append(aluno.copy)
+    print(f'{aluno}')
+    alunos_notas.append(aluno.copy())
+    print(f'{alunos_notas[0]}')
     aluno.clear()
     continuar_adicionando_alunos = str(input('Deseja cadastrar mais alunos? S para SIM, N para NAO.\n')).upper().strip()
     if continuar_adicionando_alunos == 'N':
         break
 
+indexval = 0
+for index in range(len(alunos_notas)):
+    print(alunos_notas[indexval])
+    indexval += 1
+
+"""
 print('Alunos e notas cadastrados: ')
 for indice, aluno in enumerate(alunos_notas):
     print(f'Nome: {aluno["nome"]}.')
     print(print_rabbit())
 print('...Finalizando programa...\n')
+"""
